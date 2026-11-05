@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="page-hero">
+    <div class="section-wrap page-hero-inner">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>404</p>
+      <h1>{{ i18n "notFound.title" }}</h1>
+      <p class="page-description">{{ i18n "notFound.text" }}</p>
+      <a class="button button-lime" href="{{ site.Home.RelPermalink }}">{{ i18n "notFound.action" }}</a>
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Description | default site.Params.description }}">
+    <meta name="theme-color" content="#061c31">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ range .AllTranslations }}
+      <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    <link rel="alternate" hreflang="x-default" href="{{ site.Home.Permalink }}">
+    <link rel="icon" type="image/svg+xml" href="{{ "images/cambonos-icon.svg" | relURL }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    {{ $styles := resources.Get "css/site.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    <title>{{ if .IsHome }}CambonOS{{ else }}{{ .Title }} | CambonOS{{ end }}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">{{ i18n "skip" }}</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="CambonOS, {{ i18n "homeLabel" }}">
+          <img src="{{ "images/cambonos-icon.svg" | relURL }}" width="44" height="44" alt="">
+          <span>CambonOS</span>
+        </a>
+        <nav class="main-nav" aria-label="{{ i18n "navigation" }}">
+          <a href="{{ "about/" | relLangURL }}">{{ i18n "nav.about" }}</a>
+          <a href="{{ "install/" | relLangURL }}">{{ i18n "nav.install" }}</a>
+          <a href="{{ "packages/" | relLangURL }}">{{ i18n "nav.packages" }}</a>
+          <a class="nav-download" href="{{ "downloads/" | relLangURL }}">{{ i18n "nav.download" }}</a>
+          {{ range .AllTranslations }}
+            {{ if ne .Language.Lang $.Language.Lang }}
+              <a class="language-switch" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
+            {{ end }}
+          {{ end }}
+        </nav>
+      </div>
+    </header>
+    <main id="contenido">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="{{ site.Home.RelPermalink }}">
+          <img src="{{ "images/cambonos-text-white.svg" | relURL }}" width="170" height="42" alt="CambonOS">
+        </a>
+        <p>{{ i18n "footer.note" }}</p>
+        <div class="footer-links">
+          <a href="{{ site.Params.sourceURL }}">{{ i18n "footer.source" }}</a>
+          <a href="{{ site.Params.packageURL }}">{{ i18n "footer.mirror" }}</a>
+        </div>
+        <small>© {{ now.Year }} CambonOS</small>
+      </div>
+    </footer>
+  </body>
+</html>

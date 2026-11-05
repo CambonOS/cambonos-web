@@ -1,0 +1,63 @@
+[skip]
+other = 'Saltar al contenido'
+[homeLabel]
+other = 'inicio'
+[navigation]
+other = 'Navegación principal'
+[nav]
+about = 'CambonOS'
+install = 'Instalación'
+packages = 'Paquetes'
+download = 'Descargar'
+[footer]
+note = 'Una distribución GNU/Linux basada en Arch.'
+source = 'GitHub'
+mirror = 'Espejo de paquetes'
+[home]
+kicker = 'Una distribución basada en Arch Linux'
+title = 'CambonOS, a tu manera.'
+lede = 'Una experiencia de escritorio propia, construida sobre Arch y en evolución constante.'
+download = 'Descargar ISO'
+install = 'Guía de instalación'
+release = 'Compilación de desarrollo para'
+emblemAlt = 'Símbolo oficial de CambonOS'
+bottomLeft = 'HECHO CON ARCH LINUX'
+bottomRight = 'CAMBONOS / BASE ARCH'
+aboutIndex = 'CONÓCENOS'
+aboutTitle = 'Arch es la base. CambonOS, el carácter.'
+aboutText = 'Un sistema rolling release con identidad visual, paquetes propios y opciones de escritorio seleccionadas por el proyecto. Lo esencial, construido con una base Arch.'
+learnMore = 'Descubre el proyecto'
+systemIndex = 'EL SISTEMA'
+systemTitle = 'Lo que hay bajo el capó.'
+desktopIndex = 'EL ESCRITORIO'
+desktopTitle = 'Elige cómo trabajar.'
+recommended = 'RECOMENDADO'
+alternative = 'ALTERNATIVA'
+xfceText = 'Un entorno de escritorio completo y configurable, seleccionado como opción recomendada en el instalador actual.'
+qtileText = 'Un gestor de ventanas en mosaico para quienes prefieren organizar su espacio con teclado y ventanas apiladas.'
+getIndex = 'EMPIEZA AQUÍ'
+getTitle = 'Conoce CambonOS.'
+getText = 'La compilación disponible está en desarrollo. Revisa la información antes de instalar.'
+[home.systemA]
+title = 'Una base rolling'
+text = 'Actualizaciones continuas sobre Arch Linux, con canales de paquetes stable y testing para CambonOS.'
+[home.systemB]
+title = 'Paquetes del proyecto'
+text = 'Configuración de sistema, identidad CambonOS, llavero y herramientas distribuidos en paquetes propios.'
+[home.systemC]
+title = 'Instalación a tu elección'
+text = 'El instalador actual ofrece Cambon18 con XFCE como opción recomendada y Qtile como alternativa.'
+[page]
+kicker = 'CAMBONOS / INFORMACIÓN'
+[downloads]
+label = 'DESCARGA'
+buildTitle = 'Compilación de desarrollo'
+buildText = 'Imagen ISO x86_64 enlazada a la publicación dev del instalador.'
+action = 'Descargar ISO'
+warningTitle = 'Antes de instalar:'
+warningText = 'una instalación en disco limpio borra el disco seleccionado.'
+installLink = 'Lee la guía de instalación.'
+[notFound]
+title = 'No encontramos esa página.'
+text = 'El enlace puede haber cambiado o la página ya no existe.'
+action = 'Volver al inicio'

@@ -1,0 +1,63 @@
+[skip]
+other = 'Skip to content'
+[homeLabel]
+other = 'home'
+[navigation]
+other = 'Main navigation'
+[nav]
+about = 'CambonOS'
+install = 'Installation'
+packages = 'Packages'
+download = 'Download'
+[footer]
+note = 'An Arch-based GNU/Linux distribution.'
+source = 'GitHub'
+mirror = 'Package mirror'
+[home]
+kicker = 'An Arch Linux-based distribution'
+title = 'CambonOS, on your terms.'
+lede = 'A distinctive desktop experience, built on Arch and evolving with the project.'
+download = 'Download ISO'
+install = 'Installation guide'
+release = 'Development build for'
+emblemAlt = 'Official CambonOS symbol'
+bottomLeft = 'BUILT ON ARCH LINUX'
+bottomRight = 'CAMBONOS / ARCH-BASED'
+aboutIndex = 'ABOUT US'
+aboutTitle = 'Arch is the base. CambonOS is the character.'
+aboutText = 'A rolling-release system with its own visual identity, project packages, and selected desktop options. The essentials, built on Arch.'
+learnMore = 'Explore the project'
+systemIndex = 'THE SYSTEM'
+systemTitle = 'Under the hood.'
+desktopIndex = 'THE DESKTOP'
+desktopTitle = 'Choose how you work.'
+recommended = 'RECOMMENDED'
+alternative = 'ALTERNATIVE'
+xfceText = 'A configurable, full desktop environment selected as the recommended option in the current installer.'
+qtileText = 'A tiling window manager for people who prefer to arrange their workspace with keyboard-driven windows.'
+getIndex = 'GET STARTED'
+getTitle = 'Meet CambonOS.'
+getText = 'The available build is in development. Read the details before installing.'
+[home.systemA]
+title = 'A rolling foundation'
+text = 'Continuous updates on Arch Linux, with stable and testing package channels for CambonOS.'
+[home.systemB]
+title = 'Project packages'
+text = 'System configuration, CambonOS branding, keyring, and tools distributed as dedicated packages.'
+[home.systemC]
+title = 'Installation choices'
+text = 'The current installer offers Cambon18 with XFCE as recommended, and Qtile as an alternative.'
+[page]
+kicker = 'CAMBONOS / INFORMATION'
+[downloads]
+label = 'DOWNLOAD'
+buildTitle = 'Development build'
+buildText = 'x86_64 ISO linked to the installer’s dev release.'
+action = 'Download ISO'
+warningTitle = 'Before installing:'
+warningText = 'a clean-disk installation erases the selected disk.'
+installLink = 'Read the installation guide.'
+[notFound]
+title = 'We could not find that page.'
+text = 'The link may have changed or the page no longer exists.'
+action = 'Back to home'

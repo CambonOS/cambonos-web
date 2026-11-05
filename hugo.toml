@@ -1,0 +1,44 @@
+baseURL = 'https://cambonos.org/'
+defaultContentLanguage = 'es'
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+title = 'CambonOS'
+timeZone = 'Europe/Madrid'
+
+[languages]
+  [languages.es]
+    locale = 'es-ES'
+    label = 'Español'
+    weight = 1
+    title = 'CambonOS'
+    [languages.es.params]
+      description = 'CambonOS es una distribución GNU/Linux basada en Arch, pensada para ofrecer una experiencia de escritorio propia.'
+  [languages.en]
+    locale = 'en-US'
+    label = 'English'
+    weight = 2
+    title = 'CambonOS'
+    [languages.en.params]
+      description = 'CambonOS is an Arch-based GNU/Linux distribution with its own desktop experience.'
+
+[params]
+  canonicalHost = 'https://cambonos.org'
+  downloadURL = 'https://github.com/CambonOS/installer/releases/download/dev/CambonOS-dev-x86_64.iso'
+  downloadLabel = 'dev'
+  packageURL = 'https://mirror.cambonos.org'
+  sourceURL = 'https://github.com/CambonOS'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[sitemap]
+  filename = 'sitemap.xml'
+  changeFreq = 'weekly'
+  priority = 0.5
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

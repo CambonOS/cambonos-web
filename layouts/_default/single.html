@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <section class="page-hero">
+    <div class="section-wrap page-hero-inner">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>{{ i18n "page.kicker" }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+    </div>
+  </section>
+  <article class="prose section-wrap">
+    {{ .Content }}
+  </article>
+{{ end }}
