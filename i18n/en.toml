@@ -4,6 +4,9 @@ other = 'Skip to content'
 other = 'home'
 [navigation]
 other = 'Main navigation'
+[menu]
+open = 'Open navigation menu'
+close = 'Close navigation menu'
 [theme]
 label = 'Theme'
 open = 'Open theme options'

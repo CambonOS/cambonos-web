@@ -45,12 +45,16 @@
           <img src="{{ "images/cambonos-icon.svg" | relURL }}" width="44" height="44" alt="">
           <span>CambonOS</span>
         </a>
-        <nav class="main-nav" aria-label="{{ i18n "navigation" }}">
+        <button class="menu-toggle" type="button" aria-label="{{ i18n "menu.open" }}" aria-expanded="false" aria-controls="main-nav" data-open-label="{{ i18n "menu.open" }}" data-close-label="{{ i18n "menu.close" }}">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="{{ i18n "navigation" }}">
           <a href="{{ "about/" | relLangURL }}">{{ i18n "nav.about" }}</a>
           <a href="{{ "install/" | relLangURL }}">{{ i18n "nav.install" }}</a>
           <a href="{{ "packages/" | relLangURL }}">{{ i18n "nav.packages" }}</a>
-          <a class="nav-download" href="{{ "downloads/" | relLangURL }}">{{ i18n "nav.download" }}</a>
+          <a class="nav-download" href="{{ "downloads/" | relLangURL }}"><span class="nav-download-label">{{ i18n "nav.download" }}</span></a>
           <div class="nav-tools">
+            <a class="nav-download-utility" href="{{ "downloads/" | relLangURL }}">{{ i18n "nav.download" }}</a>
             {{ range .AllTranslations }}
               {{ if ne .Language.Lang $.Language.Lang }}
                 <a class="language-switch" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>

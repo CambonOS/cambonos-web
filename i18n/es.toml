@@ -4,6 +4,9 @@ other = 'Saltar al contenido'
 other = 'inicio'
 [navigation]
 other = 'Navegación principal'
+[menu]
+open = 'Abrir menú de navegación'
+close = 'Cerrar menú de navegación'
 [theme]
 label = 'Tema'
 open = 'Abrir opciones de tema'

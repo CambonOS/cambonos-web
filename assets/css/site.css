@@ -26,7 +26,7 @@ body {
   line-height: 1.65;
 }
 a { color: inherit; }
-a:focus-visible, summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
 img { display: block; max-width: 100%; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: var(--display); line-height: 1.08; }
@@ -41,10 +41,12 @@ h3 { margin-bottom: 10px; font-size: 1.55rem; }
 .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-family: var(--display); font-size: 1.25rem; font-weight: 700; }
 .brand img { width: 42px; height: 42px; object-fit: contain; }
+.menu-toggle { display: none; }
 .main-nav { display: flex; align-items: center; gap: clamp(12px, 2vw, 25px); }
 .main-nav a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 600; }
 .main-nav a:hover { color: #006f78; }
 .main-nav .nav-download { padding: 10px 17px; color: var(--navy); background: var(--lime); }
+.nav-download-utility { display: none; }
 .main-nav .language-switch { padding-left: 18px; border-left: 1px solid var(--line); font-size: .8rem; }
 .nav-tools { display: inline-flex; align-items: center; gap: 10px; }
 .theme-menu { position: relative; }
@@ -203,18 +205,31 @@ h3 { margin-bottom: 10px; font-size: 1.55rem; }
   .desktop-option + .desktop-option { padding-left: 24px; }
 }
 
-@media (max-width: 640px) {
-  body { font-size: 15px; }
-  .section-wrap, .header-inner, .hero-grid, .hero-bottomline, .footer-inner { width: min(100% - 36px, 560px); }
+@media (max-width: 720px) {
   .header-inner { min-height: 72px; display: grid; grid-template-columns: 1fr auto; gap: 0 12px; padding-block: 11px; }
   .brand { font-size: 1.05rem; }
   .brand img { width: 35px; height: 35px; }
-  .main-nav { grid-column: 1 / -1; grid-row: 2; min-width: 0; width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 3px; padding-top: 12px; }
+  .menu-toggle { width: 42px; height: 42px; display: flex; grid-column: 2; grid-row: 1; align-items: center; justify-content: center; flex-direction: column; gap: 5px; padding: 9px; border: 1px solid var(--line); color: var(--ink); background: transparent; cursor: pointer; }
+  .menu-toggle span { width: 20px; height: 2px; display: block; background: currentColor; transition: transform .18s ease, opacity .18s ease; }
+  .menu-toggle[aria-expanded='true'] span:first-child { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded='true'] span:last-child { transform: translateY(-7px) rotate(-45deg); }
+  .main-nav { display: none; grid-column: 1 / -1; grid-row: 2; min-width: 0; width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 3px; padding-top: 12px; }
+  .main-nav.is-open { display: flex; align-items: stretch; flex-direction: column; gap: 0; }
   .main-nav a { font-size: .72rem; white-space: nowrap; }
+  .main-nav.is-open > a { padding: 10px 0; border-top: 1px solid var(--line); font-size: .9rem; }
   .main-nav .nav-download { padding: 5px 6px; }
+  .main-nav .nav-download { display: none; }
+  .main-nav .nav-download-utility { display: inline-flex; align-items: center; padding-right: 7px; color: var(--ink); font-size: .72rem; font-weight: 600; text-decoration: none; }
   .main-nav .language-switch { padding-left: 7px; }
   .nav-tools { flex: 0 0 auto; gap: 4px; margin-left: auto; }
+  .main-nav.is-open .nav-tools { width: 100%; min-height: 42px; justify-content: flex-end; padding-top: 7px; border-top: 1px solid var(--line); }
   .theme-menu summary { width: 30px; height: 30px; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .section-wrap, .header-inner, .hero-grid, .hero-bottomline, .footer-inner { width: min(100% - 36px, 560px); }
   .hero-grid { min-height: 0; grid-template-columns: 1fr; gap: 25px; padding-block: 68px 42px; }
   h1 { font-size: clamp(2.7rem, 12vw, 4rem); }
   .hero-lede { font-size: 1.05rem; }
