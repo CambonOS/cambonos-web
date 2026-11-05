@@ -29,6 +29,8 @@ The generated site is written to `public/` and is not committed.
 - Translated content is paired with `.en.md` files in `content/`.
 - The ISO URL and `dev` label are configured once in `hugo.toml` under `[params]`.
 - Branding assets are in `static/images/`; the included license is from the CambonOS branding package.
+- The appearance selector offers system, light, and dark modes; explicit choices are stored in browser local storage.
+- The root URL follows the browser's preferred Spanish or English language until the visitor chooses a language; that choice is stored locally.
 
 The configured download is a development build. Confirm its availability and replace `downloadURL` and `downloadLabel` in `hugo.toml` when publishing a new artifact. Do not describe it as stable until a stable release is available.
 

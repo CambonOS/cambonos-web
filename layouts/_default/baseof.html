@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ .Description | default site.Params.description }}">
     <meta name="theme-color" content="#061c31">
+    <script>
+      try {
+        const theme = localStorage.getItem('cambonos-theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
+    {{ if and .IsHome (eq site.Language.Lang "es") }}
+      <script>
+        try {
+          const savedLanguage = localStorage.getItem('cambonos-language');
+          const preferredLanguages = navigator.languages?.length ? navigator.languages : [navigator.language];
+          const preferredLanguage = preferredLanguages
+            .map((language) => language.split('-')[0].toLowerCase())
+            .find((language) => language === 'es' || language === 'en');
+          const language = savedLanguage === 'es' || savedLanguage === 'en' ? savedLanguage : preferredLanguage;
+          if (language === 'en') window.location.replace('/en/');
+        } catch {}
+      </script>
+    {{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
     {{ range .AllTranslations }}
       <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
@@ -31,11 +50,24 @@
           <a href="{{ "install/" | relLangURL }}">{{ i18n "nav.install" }}</a>
           <a href="{{ "packages/" | relLangURL }}">{{ i18n "nav.packages" }}</a>
           <a class="nav-download" href="{{ "downloads/" | relLangURL }}">{{ i18n "nav.download" }}</a>
-          {{ range .AllTranslations }}
-            {{ if ne .Language.Lang $.Language.Lang }}
-              <a class="language-switch" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
+          <div class="nav-tools">
+            {{ range .AllTranslations }}
+              {{ if ne .Language.Lang $.Language.Lang }}
+                <a class="language-switch" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
+              {{ end }}
             {{ end }}
-          {{ end }}
+            <details class="theme-menu">
+              <summary aria-label="{{ i18n "theme.open" }}" title="{{ i18n "theme.open" }}">
+                <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+                <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+              </summary>
+              <div class="theme-options" role="group" aria-label="{{ i18n "theme.label" }}">
+                <button type="button" data-theme-choice="system">{{ i18n "theme.system" }}</button>
+                <button type="button" data-theme-choice="light">{{ i18n "theme.light" }}</button>
+                <button type="button" data-theme-choice="dark">{{ i18n "theme.dark" }}</button>
+              </div>
+            </details>
+          </div>
         </nav>
       </div>
     </header>
@@ -55,5 +87,7 @@
         <small>© {{ now.Year }} CambonOS</small>
       </div>
     </footer>
+    {{ $themeScript := resources.Get "js/theme.js" | minify | fingerprint }}
+    <script src="{{ $themeScript.RelPermalink }}" integrity="{{ $themeScript.Data.Integrity }}" defer></script>
   </body>
 </html>

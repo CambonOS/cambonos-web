@@ -4,6 +4,12 @@ other = 'Skip to content'
 other = 'home'
 [navigation]
 other = 'Main navigation'
+[theme]
+label = 'Theme'
+open = 'Open theme options'
+system = 'System'
+light = 'Light'
+dark = 'Dark'
 [nav]
 about = 'CambonOS'
 install = 'Installation'
