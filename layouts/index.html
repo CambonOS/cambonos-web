@@ -14,7 +14,10 @@
       <div class="hero-emblem" aria-label="{{ i18n "home.emblemAlt" }}">
         <div class="emblem-frame">
           <span class="frame-label frame-label-top">CAMBONOS / ARCH</span>
-          <img src="{{ "images/cambonos-icon.svg" | relURL }}" width="300" height="300" alt="{{ i18n "home.emblemAlt" }}">
+          <picture class="emblem-mark">
+            <source srcset="{{ "images/cambonos-icon.svg" | relURL }}" type="image/svg+xml">
+            <img src="{{ "images/cambonos-icon.png" | relURL }}" width="300" height="300" alt="{{ i18n "home.emblemAlt" }}">
+          </picture>
           <span class="frame-label frame-label-bottom">X86_64 · ROLLING RELEASE</span>
         </div>
       </div>
@@ -67,12 +70,12 @@
     <div class="desktop-options">
       <article class="desktop-option desktop-recommended">
         <span class="option-label">{{ i18n "home.recommended" }}</span>
-        <div><h3>XFCE</h3><p>{{ i18n "home.xfceText" }}</p></div>
+        <div><h3>XFCE</h3><p>{{ i18n "home.xfceText" }}</p><a class="desktop-project-link" href="https://github.com/Cambon18/xfce">{{ i18n "home.xfceLink" }} <span aria-hidden="true">↗</span></a></div>
         <span class="option-arrow" aria-hidden="true">↗</span>
       </article>
       <article class="desktop-option">
         <span class="option-label">{{ i18n "home.alternative" }}</span>
-        <div><h3>Qtile</h3><p>{{ i18n "home.qtileText" }}</p></div>
+        <div><h3>Qtile</h3><p>{{ i18n "home.qtileText" }}</p><a class="desktop-project-link" href="https://github.com/Cambon18/qtile">{{ i18n "home.qtileLink" }} <span aria-hidden="true">↗</span></a></div>
         <span class="option-arrow" aria-hidden="true">↗</span>
       </article>
     </div>

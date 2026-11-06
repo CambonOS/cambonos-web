@@ -3,7 +3,7 @@ title: 'Instalación'
 description: 'Información importante antes de instalar CambonOS.'
 ---
 
-El instalador disponible actualmente en la ISO es el instalador basado en shell. La instalación ofrece Cambon18 con XFCE, recomendado, o Qtile. Las opciones y el flujo pueden cambiar a medida que evolucione el proyecto.
+El instalador disponible actualmente en la ISO está basado en shell. Ofrece dos configuraciones de escritorio para CambonOS desarrolladas por [Cambon18](https://github.com/Cambon18): [XFCE](https://github.com/Cambon18/xfce), recomendada por el instalador actual, y [Qtile](https://github.com/Cambon18/qtile). Las opciones y el flujo pueden cambiar a medida que evolucione el proyecto.
 
 ## Antes de empezar
 
@@ -19,4 +19,4 @@ La opción que utiliza espacio libre requiere un sistema con arranque UEFI. Si n
 
 ## Entorno de escritorio
 
-XFCE es la opción recomendada por el instalador actual. Qtile también está disponible como alternativa. La lista refleja las opciones documentadas en el instalador vigente; no implica que existan otras ediciones.
+Las configuraciones de escritorio XFCE y Qtile para CambonOS son desarrolladas por Cambon18. El instalador actual recomienda XFCE; Qtile también está disponible. Estas opciones son configuraciones de escritorio, no ediciones independientes de la distribución.

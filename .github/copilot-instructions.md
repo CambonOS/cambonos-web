@@ -5,5 +5,5 @@
 - Spanish is the default language at `/`; English content is under `/en/` and paired with `.en.md` files.
 - Keep the ISO URL and release label centralized in `[params]` in `hugo.toml`; identify the current artifact as `dev` until a stable release is published.
 - Only publish installer, package, and distribution details confirmed by the CambonOS repositories.
-- Preserve the supplied logo files and their included branding license; the logo files have SVG content and must keep `.svg` extensions.
+- Preserve the four supplied color logos and the included branding license; keep each SVG and PNG file in its matching format and extension.
 - Do not commit generated `public/` output.

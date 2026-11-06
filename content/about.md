@@ -7,7 +7,7 @@ CambonOS es una distribución GNU/Linux basada en Arch Linux. El proyecto reúne
 
 ## Una base Arch, con identidad propia
 
-El proyecto mantiene paquetes propios para la identidad del sistema, el llavero, los metadatos de versión, la integración del repositorio y la presentación de información del equipo. La distribución es rolling release y publica los paquetes en canales `stable` y `testing`.
+El proyecto mantiene paquetes propios para la identidad del sistema, el llavero, los metadatos de versión, la integración del repositorio y la presentación de información del equipo. Las configuraciones de escritorio [XFCE](https://github.com/Cambon18/xfce) y [Qtile](https://github.com/Cambon18/qtile) para CambonOS son desarrolladas por Cambon18. La distribución es rolling release y publica los paquetes en canales `stable` y `testing`.
 
 ## Un proyecto en evolución
 
