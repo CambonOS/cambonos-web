@@ -1,8 +1,8 @@
-const themeMenu = document.querySelector('.theme-menu');
+const themeToggle = document.querySelector('.theme-toggle');
 
-if (themeMenu) {
-  const choices = [...themeMenu.querySelectorAll('[data-theme-choice]')];
+if (themeToggle) {
   let preference = 'system';
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
   try {
     preference = localStorage.getItem('cambonos-theme') || 'system';
@@ -10,43 +10,35 @@ if (themeMenu) {
 
   if (!['system', 'light', 'dark'].includes(preference)) preference = 'system';
 
-  const setTheme = (selected) => {
-    if (selected === 'system') {
+  const setTheme = () => {
+    if (preference === 'system') {
       delete document.documentElement.dataset.theme;
     } else {
-      document.documentElement.dataset.theme = selected;
+      document.documentElement.dataset.theme = preference;
     }
 
-    choices.forEach((choice) => {
-      choice.setAttribute('aria-pressed', String(choice.dataset.themeChoice === selected));
-    });
+    const isDark = preference === 'dark' || (preference === 'system' && systemTheme.matches);
+    const label = isDark ? themeToggle.dataset.lightLabel : themeToggle.dataset.darkLabel;
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', label);
+    themeToggle.title = label;
   };
 
-  setTheme(preference);
+  setTheme();
 
-  choices.forEach((choice) => {
-    choice.addEventListener('click', () => {
-      const selected = choice.dataset.themeChoice;
+  themeToggle.addEventListener('click', () => {
+    const isDark = preference === 'dark' || (preference === 'system' && systemTheme.matches);
+    preference = isDark ? 'light' : 'dark';
 
-      try {
-        localStorage.setItem('cambonos-theme', selected);
-      } catch {}
+    try {
+      localStorage.setItem('cambonos-theme', preference);
+    } catch {}
 
-      setTheme(selected);
-      themeMenu.open = false;
-      themeMenu.querySelector('summary').focus();
-    });
+    setTheme();
   });
 
-  document.addEventListener('click', (event) => {
-    if (!themeMenu.contains(event.target)) themeMenu.open = false;
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && themeMenu.open) {
-      themeMenu.open = false;
-      themeMenu.querySelector('summary').focus();
-    }
+  systemTheme.addEventListener('change', () => {
+    if (preference === 'system') setTheme();
   });
 }
 
