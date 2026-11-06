@@ -23,7 +23,6 @@ timeZone = 'Europe/Madrid'
       description = 'CambonOS is an Arch-based GNU/Linux distribution with its own desktop experience.'
 
 [params]
-  canonicalHost = 'https://cambonos.org'
   downloadURL = 'https://github.com/CambonOS/installer/releases/download/dev/CambonOS-dev-x86_64.iso'
   downloadLabel = 'dev'
   packageURL = 'https://mirror.cambonos.org'
