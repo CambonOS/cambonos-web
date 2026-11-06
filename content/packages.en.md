@@ -7,4 +7,4 @@ CambonOS configuration and tools are being moved into separately maintained pack
 
 Currently documented packages cover visual branding, Fastfetch configuration, the keyring, release metadata, and repository integration. The list may grow as the migration progresses.
 
-The package repository and its mirror are separate services from this website. Read the project documentation before adding repositories or importing keys.
+The official mirror for the project is available at [mirror.cambonos.org](https://mirror.cambonos.org). The package repository and its mirror are separate services from this website. Read the project documentation before adding repositories or importing keys.

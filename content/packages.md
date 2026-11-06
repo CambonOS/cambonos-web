@@ -7,4 +7,4 @@ Las configuraciones y herramientas de CambonOS se están trasladando a paquetes 
 
 Entre los paquetes actualmente documentados están la identidad visual, la configuración de Fastfetch, el llavero, los metadatos de versión y la integración del repositorio. La lista puede ampliarse conforme avance la migración.
 
-El repositorio de paquetes y su espejo son servicios separados de esta web. Consulta la documentación del proyecto antes de añadir repositorios o importar claves.
+El espejo oficial del proyecto está disponible en [mirror.cambonos.org](https://mirror.cambonos.org). El repositorio de paquetes y su espejo son servicios separados de esta web. Consulta la documentación del proyecto antes de añadir repositorios o importar claves.

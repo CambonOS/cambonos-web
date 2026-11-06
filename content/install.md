@@ -15,7 +15,7 @@ El instalador disponible actualmente en la ISO está basado en shell. Ofrece dos
 
 El instalador permite instalar en un disco seleccionado o usar espacio libre. **La instalación en disco limpio borra el contenido del disco elegido.** Revisa cuidadosamente la selección antes de confirmar.
 
-La opción que utiliza espacio libre requiere un sistema con arranque UEFI. Si no estás seguro de cuál elegir, detén la instalación y consulta antes de modificar las particiones.
+La opción de espacio libre solo funciona cuando el hueco libre está al final del disco. Si no está al final, el instalador no puede usarlo correctamente porque toma el último espacio libre detectado y particiona ahí. La opción requiere un sistema con arranque UEFI. Si no estás seguro de cuál elegir, detén la instalación y consulta antes de modificar las particiones.
 
 ## Entorno de escritorio
 

@@ -64,17 +64,10 @@
                 <a class="language-switch" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
               {{ end }}
             {{ end }}
-            <details class="theme-menu">
-              <summary aria-label="{{ i18n "theme.open" }}" title="{{ i18n "theme.open" }}">
+            <button class="theme-toggle" type="button" aria-label="{{ i18n "theme.toDark" }}" title="{{ i18n "theme.toDark" }}" aria-pressed="false" data-light-label="{{ i18n "theme.toLight" }}" data-dark-label="{{ i18n "theme.toDark" }}">
                 <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
                 <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
-              </summary>
-              <div class="theme-options" role="group" aria-label="{{ i18n "theme.label" }}">
-                <button type="button" data-theme-choice="system">{{ i18n "theme.system" }}</button>
-                <button type="button" data-theme-choice="light">{{ i18n "theme.light" }}</button>
-                <button type="button" data-theme-choice="dark">{{ i18n "theme.dark" }}</button>
-              </div>
-            </details>
+            </button>
           </div>
         </nav>
       </div>
