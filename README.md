@@ -27,13 +27,13 @@ The generated site is written to `public/` and is not committed.
 
 - Spanish is the default language; English pages live under `/en/`.
 - Translated content is paired with `.en.md` files in `content/`.
-- The ISO URL and `dev` label are configured once in `hugo.toml` under `[params]`.
+- The ISO URL and release label are configured once in `hugo.toml` under `[params]`; the current download is the stable 26.11 release.
 - The four current color logo assets are in `static/images/`: SVG is preferred and PNG is the fallback for both icon and wordmark. The included license is preserved from the CambonOS branding package.
 - The web palette uses `#F7F5EC` as its official soft white surface color. The logo sources use the supplied brand colors.
 - The appearance selector offers system, light, and dark modes; explicit choices are stored in browser local storage.
 - The root URL follows the browser's preferred Spanish or English language until the visitor chooses a language; that choice is stored locally.
 
-The configured download is a development build. Confirm its availability and replace `downloadURL` and `downloadLabel` in `hugo.toml` when publishing a new artifact. Do not describe it as stable until a stable release is available.
+The configured download points to the stable 26.11 ISO on GitHub Releases. Update `downloadURL` and `downloadLabel` in `hugo.toml` when publishing a new artifact, and keep both language versions of the downloads page in sync.
 
 ## GitHub Pages
 

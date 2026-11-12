@@ -1,10 +1,10 @@
 ---
 title: 'Downloads'
-description: 'Download the CambonOS development build.'
+description: 'Download CambonOS stable version 26.11.'
 ---
 
-The currently configured download points to a `dev` build of the installer rather than a stable release. The stable version is very outdated, and a new stable release is being worked on, but the `dev` build is functional and allows testing the current flow of the project.
+The download provides the CambonOS 26.11 stable ISO.
 
-The link points to an artifact published on GitHub Releases; availability depends on the project maintaining that resource. Before installing, read the installation guide and back up your data.
+SHA-256: `ae1fd46d516137bf20fcdbe7ed3ee4f0efb3c18419aa679fa32d5a986fb9a11f`.
 
-Checksums, signatures, file size, and release date will be shown when they are published and can be verified.
+The installer may erase data on the selected disk. Carefully verify the disk and installation mode before confirming. Before installing, read the installation guide and back up your data.

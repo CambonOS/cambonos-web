@@ -1,10 +1,10 @@
 ---
 title: 'Descargas'
-description: 'Descarga la compilación de desarrollo de CambonOS.'
+description: 'Descarga la versión estable 26.11 de CambonOS.'
 ---
 
-La descarga configurada actualmente apunta a una compilación `dev` del instalador, no a la versión estable. La versión stable está muy desactualizada y se está trabajando en una nueva versión estable, pero la compilación `dev` es funcional y permite probar el flujo actual del proyecto.
+La descarga ofrece la ISO estable de CambonOS 26.11.
 
-El enlace apunta al artefacto publicado en GitHub Releases; su disponibilidad depende de que el proyecto mantenga ese recurso. Antes de instalar, revisa la guía de instalación y respalda tus datos.
+SHA-256: `ae1fd46d516137bf20fcdbe7ed3ee4f0efb3c18419aa679fa32d5a986fb9a11f`.
 
-Los checksums, firmas, tamaño y fecha de publicación se mostrarán cuando estén publicados y puedan verificarse.
+El instalador puede borrar los datos del disco seleccionado. Comprueba cuidadosamente el disco y el modo de instalación antes de confirmar. Antes de instalar, revisa la guía de instalación y respalda tus datos.
