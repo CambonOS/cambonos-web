@@ -44,9 +44,8 @@ h3 { margin-bottom: 10px; font-size: 1.55rem; }
 .brand-mark img { width: 100%; height: 100%; object-fit: contain; }
 .menu-toggle { display: none; }
 .main-nav { display: flex; align-items: center; gap: clamp(12px, 2vw, 25px); }
-.main-nav a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 600; }
-.main-nav a:hover { color: #006f78; }
-.main-nav .nav-download { padding: 10px 17px; color: var(--navy); background: var(--lime); }
+.main-nav a:not(.button) { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 600; }
+.main-nav a:not(.button):hover { color: #006f78; }
 .nav-download-utility { display: none; }
 .main-nav .language-switch { width: 36px; height: 36px; display: grid; place-items: center; padding: 0; border: 1px solid var(--line); font-size: .8rem; }
 .nav-tools { display: inline-flex; align-items: center; gap: 10px; }
@@ -163,10 +162,10 @@ h3 { margin-bottom: 10px; font-size: 1.55rem; }
   --page: #0a1d2b;
 }
 
-:root[data-theme='dark'] .main-nav a:hover,
+:root[data-theme='dark'] .main-nav a:not(.button):hover,
 :root[data-theme='dark'] .main-nav .language-switch:hover { color: var(--aqua); }
 :root[data-theme='dark'] .text-link:hover,
-:root[data-theme='dark'] .prose a,
+:root[data-theme='dark'] .prose a:not(.button),
 :root[data-theme='dark'] .option-label,
 :root[data-theme='dark'] .desktop-project-link,
 :root[data-theme='dark'] .section-index,
@@ -187,10 +186,10 @@ h3 { margin-bottom: 10px; font-size: 1.55rem; }
     --page: #0a1d2b;
   }
 
-  :root:not([data-theme='light']) .main-nav a:hover,
+  :root:not([data-theme='light']) .main-nav a:not(.button):hover,
   :root:not([data-theme='light']) .main-nav .language-switch:hover { color: var(--aqua); }
   :root:not([data-theme='light']) .text-link:hover,
-  :root:not([data-theme='light']) .prose a,
+  :root:not([data-theme='light']) .prose a:not(.button),
   :root:not([data-theme='light']) .option-label,
   :root:not([data-theme='light']) .desktop-project-link,
   :root:not([data-theme='light']) .section-index,
